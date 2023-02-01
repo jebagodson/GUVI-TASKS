@@ -1,0 +1,65 @@
+let myResume={
+    "Personal Details": {
+      "name": "Jeba Godson J",
+      "email": "jebagodson006@gamil.com",
+      "phone": 9003278828,
+      "location": {
+        "address": "No 26A, I Street, Vetri Nagar, West Tambaram",
+        "city": "Chennai",
+	"postalCode": "600030",        
+	"state": "Tamilnadu",
+        "country": "India"
+      },
+    },
+    "Experience": [
+      {
+        "company": "MARY PLASTICS",
+        "position": "Propreitor",
+        "startDate": "Aug 2013",
+        "endDate": "Present",
+      },
+	{
+        "company": "HDFC BANK LTD",
+        "position": "Assistant Manager",
+        "startDate": "Jan 2013",
+        "endDate": "July 2013",
+      },
+	{
+        "company": "ICICI BANK LTD",
+        "position": "Senior Officer",
+        "startDate": "Jan 2013",
+        "endDate": "July 2013",
+      },
+    ],
+    "Education": [
+      {
+        "institution": "Jeppiaar Engineering College",
+        "department": "Electronics and Communication Engineering",
+        "studyType": "fulltime",
+        "batch start year": "2006",
+        "batch end year": "2010",
+      }
+    ],
+    "Skills": [
+      {
+        "name": "HTML,CSS,javascript,Bootstrap,AWS",
+        "level": "beginner",
+      }
+    ],
+    "Certifications": [
+      {
+        "Courses": "Master Diploma in Graphics And Visual Effects",
+	"Year":"2010"
+      },
+	{
+        "Courses": "FullStack Web Developer",
+	"Year":"Pursuing"
+	}
+    ],
+    "languages": [
+      {
+        "language": "Tamil,Enlish",
+      }
+    ],
+  }
+  console.log(myResume);
