@@ -1,0 +1,76 @@
+class Movie {
+  constructor(title = '', studio = '', rating = 'PG') {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+
+  getPG(movies = [], rating = '') {
+    return movies.filter((m) => m.rating === rating);
+  }
+}
+
+const casinoRoyale = new Movie('Casino Royale', 'Eon Productions', 'PG13');
+const aSpaceOdyssey = new Movie('A Space Odyssey', 'Hawk Films', 'PG13');
+const theGodfather = new Movie('The Godfather', 'Paramount Pictures', 'PG');
+const citizenKane = new Movie('Citizen Kane', 'RKO Radio Pictures', 'R');
+const avatar = new Movie('Avatar', '20th Century Studios', 'PG13');
+const avengers = new Movie('The avengers', 'Marvel Studios', 'R');
+const sevenSamurai = new Movie('Seven Samurai', 'Toho', 'PG13');
+const goodFellas = new Movie('GoodFellas', 'Warner Bros. Pictures', 'PG');
+
+const moviesArray = [casinoRoyale, aSpaceOdyssey, theGodfather, citizenKane, avatar, avengers, sevenSamurai, goodFellas];
+
+console.log(casinoRoyale.getPG(moviesArray, 'PG13'));
+
+
+**************************************************************************************************************************
+3.
+
+class Person {
+  constructor(name = '', age= '', gender = '', qulification = '', occupation = '') {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.qulification = qulification;
+    this.occupation = occupation;
+  }
+getgender(Person = [], gender = '') {
+    return Person.filter((p) => p.gender === gender);
+  }
+}
+
+const jeba = new Person('Jeba Godson', '29', 'Male', 'B.E', 'Salaried');
+const rajesh = new Person('Rajesh', '28', 'Male', 'M.Tech', 'Self Employeed');
+const vinoth = new Person('Vinoth', '28', 'Male', 'BCA', 'Salaried');
+const sandhiya = new Person('Sandhiya', '27', 'Female', 'B.Tech', 'House Wife');
+const saranya = new Person('Saranya', '28', 'Female', 'B.Sc', 'Salaried');
+
+const personArray = [jeba, rajesh, vinoth, sandhiya, saranya];
+
+console.log(jeba.getgender(personArray, 'Male'));
+
+
+**************************************************************************************************************************
+4. 
+
+class Uber {
+    constructor(name, vehicleNo, price, destination, distance) {
+       // DEFINING PROPERTIES
+       this.name = name;
+       this.vehicleNo = vehicleNo;
+       this.price = price;
+       this.destination = destination;
+       this.distance = distance;
+     }
+     
+     tripAmount() {
+        return this.distance * this.price;
+     }
+}
+ 
+const rajesh = new Uber('Rajesh', 'TN 11 U 1234', 100, 'Vadapalani', 3);
+const vinoth = new Uber('Vinoth','TN 22 ER 4321', 120, 'Saidapet', 2);
+
+console.log(rajesh.tripAmount());
+console.log(vinoth.tripAmount()); 
