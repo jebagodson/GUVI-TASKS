@@ -1,0 +1,79 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+label{
+    font-weight: 500;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 8px;
+    font-size: small;
+    text-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.text-left{
+    text-align: left;
+}
+.row-width{
+    width: 15%;
+}
+.container {
+    margin: 0 15% 0 15%;
+}
+
+.star {
+    color: Red;
+}
+
+.block {
+    display: block;
+
+}
+
+.inline {
+    display: inline;
+}
+
+.margin-right {
+    margin-right: 3%;
+}
+
+.margin-left {
+    margin-left: 29%;
+}
+
+.size {
+    width: 60%;
+}
+.half-size{
+    width:28%
+}
+.checked {
+    color: orange;
+}
+
+.margin-top-bottom {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.margin-top {
+    margin-top: 2%;
+}
+.description{
+    font-size: smaller;
+}
+.text-area{
+    width: 100%;
+    margin-bottom: 2%;
+}

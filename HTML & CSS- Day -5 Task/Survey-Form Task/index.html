@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,100;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="container">
+        <form>
+            <label for="name" class="block">Name<sup class="star">*</sup></label>
+            <input type="text" id="fname" name="fname" class="margin-right half-size">
+            <input type="text" id="lname" name="lname" class="half-size"><br>
+            <label for="first" class="description">First</label>
+            <label for="last" class="description margin-left">Last</label>
+            <label for="email" class="block margin-top">Email<sup class="star">*</sup></label>
+            <input type="email" id="email" name="email" class="size">
+            <label for="exp" class="block margin-top-bottom">Your Experience<sup class="star">*</sup></label>
+            <!--Ratings-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-o"></span>
+            <span class="fa fa-star-o"></span>
+            <p class="description">Overall, how would you rate your experience with us?</p>
+
+            <!--First Table-->
+            <label for="satisfied" class="block margin-top-bottom">How satisfied are you with<sup
+                    class="star">*</sup></label>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Very Unsatisfied</th>
+                    <th>Unsatisfied</th>
+                    <th>Neutral</th>
+                    <th>Satisfied</th>
+                    <th>Very Satisfied</th>
+                </tr>
+                <tr>
+                    <td class="text-left row-width">Purchase</td>
+                    <td><input type="radio" id="pur_very_unsatisfied" name="purchase" value="pur_very_unsatisfied"></td>
+                    <td><input type="radio" id="pur_unsatisfied" name="purchase" value="pur_unsatisfied"></td>
+                    <td><input type="radio" id="pur_neutral" name="purchase" value="pur_neutral"></td>
+                    <td><input type="radio" id="pur_satisfied" name="purchase" value="pur_satisfied"></td>
+                    <td><input type="radio" id="pur_very_satisfied" name="purchase" value="pur_very_satisfied"></td>
+                </tr>
+                <tr>
+                    <td class="text-left row-width">Service</td>
+                    <td><input type="radio" id="ser_very_unsatisfied" name="service" value="ser_very_unsatisfied"></td>
+                    <td><input type="radio" id="ser_unsatisfied" name="service" value="ser_unsatisfied"></td>
+                    <td><input type="radio" id="ser_neutral" name="service" value="ser_neutral"></td>
+                    <td><input type="radio" id="ser_satisfied" name="service" value="ser_satisfied"></td>
+                    <td><input type="radio" id="ser_very_satisfied" name="service" value="ser_very_satisfied"></td>
+                </tr>
+                <tr>
+                    <td class="text-left row-width">Company Overall</td>
+                    <td><input type="radio" id="com_very_unsatisfied" name="company" value="com_very_unsatisfied"></td>
+                    <td><input type="radio" id="com_unsatisfied" name="company" value="com_unsatisfied"></td>
+                    <td><input type="radio" id="com_neutral" name="company" value="com_neutral"></td>
+                    <td><input type="radio" id="com_satisfied" name="company" value="com_satisfied"></td>
+                    <td><input type="radio" id="com_very_satisfied" name="company" value="com_very_satisfied"></td>
+                </tr>
+            </table>
+
+            <!--Second Table-->
+            <label for="satisfied" class="block margin-top-bottom">How likely are you to<sup
+                    class="star">*</sup></label>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Very Unlikely</th>
+                    <th>Unlikely</th>
+                    <th>Neutral</th>
+                    <th>Likely</th>
+                    <th>Very Likely</th>
+                </tr>
+                <tr>
+                    <td class="text-left row-width">Buy from us again</td>
+                    <td><input type="radio" id="buy_very_unlikely" name="buy" value="buy_very_unlikely"></td>
+                    <td><input type="radio" id="buy_unlikely" name="buy" value="buy_unlikely"></td>
+                    <td><input type="radio" id="buy_neutral" name="buy" value="buy_neutral"></td>
+                    <td><input type="radio" id="buy_likely" name="buy" value="buy_likely"></td>
+                    <td><input type="radio" id="buy_very_likely" name="buy" value="buy_very_likely"></td>
+                </tr>
+                <tr>
+                    <td class="text-left row-width">Recommend our product to others</td>
+                    <td><input type="radio" id="product_very_unlikely" name="product" value="product_very_unlikely">
+                    </td>
+                    <td><input type="radio" id="product_unlikely" name="product" value="product_unlikely"></td>
+                    <td><input type="radio" id="product_neutral" name="product" value="product_neutral"></td>
+                    <td><input type="radio" id="product_likely" name="product" value="product_likely"></td>
+                    <td><input type="radio" id="product_very_likely" name="product" value="product_very_likely"></td>
+                </tr>
+                <tr>
+                    <td class="text-left row-width">Recommend our company to others</td>
+                    <td><input type="radio" id="others_very_unlikely" name="others" value="others_very_unlikely"></td>
+                    <td><input type="radio" id="others_unlikely" name="others" value="others_unlikely"></td>
+                    <td><input type="radio" id="others_neutral" name="others" value="others_neutral"></td>
+                    <td><input type="radio" id="others_likely" name="others" value="others_likely"></td>
+                    <td><input type="radio" id="others_very_likely" name="others" value="others_very_likely"></td>
+                </tr>
+            </table>
+            <label for="satisfied" class="block margin-top-bottom">Additional comments or suggestions</label>
+            <textarea id="text" name="text" rows="4" cols="50" class="text-area"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+
+</body>
+
+</html>
