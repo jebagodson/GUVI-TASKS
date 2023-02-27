@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation with forms</title>
+    <!--Style Sheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="container">
+        <h1 id="title" class="text-center">DOM Manipulation with forms</h1>
+        <p id="description">The form should contain the following field</p>
+        <h3>Forms</h3>
+        <form id="form">
+            <div class="form-group">
+                <div class="input-group mb-2">
+                    <span class="input-group-text">First Name</span>
+                    <input id="first-name" name="firstName" type="text" aria-label="First name" class="form-control"
+                        placeholder="Enter your first name" required>
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Last Name</span>
+                    <input id="last-name" name="lastName" type="text" aria-label="Last name" class="form-control"
+                        placeholder="Enter your last name" required>
+                </div>
+                <div class="form-floating mb-2">
+                    <textarea id="address" name="address" class="form-control" placeholder="Leave a comment here"
+                        id="floatingTextarea2" style="height: 100px" required></textarea>
+                    <label for="floatingTextarea2">Address</label>
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Pincode</span>
+                    <input id="pincode" name="pincode" type="text" placeholder="Enter Pincode" aria-label="Pincode" class="form-control" required>
+                </div>
+                <span class="input-text">Gender</span>
+                <div class="d-flex">
+                    <div class="form-check me-3">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                        <label class="form-check-label" for="gender">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                        <label class="form-check-label" for="gender">Female</label>
+                    </div>
+                </div>
+                <span class="input-text me-3">Choice of food(Select atleast two)</span>
+                <div id="itemForm">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="food"
+                            value="Hamburger" min="2">
+                        <label class="form-check-label" for="inlineCheckbox1">Hamburger</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="food" value="Pizza"
+                            min="2">
+                        <label class="form-check-label" for="inlineCheckbox2">Pizza</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="food" value="Salad"
+                            min="2">
+                        <label class="form-check-label" for="inlineCheckbox3">Salad</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="food" value="Bread"
+                            min="2">
+                        <label class="form-check-label" for="inlineCheckbox4">Bread</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="food" value="Donut"
+                            min="2">
+                        <label class="form-check-label" for="inlineCheckbox5">Donut</label>
+                    </div>
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">State</span>
+                    <input name="state" type="text" aria-label="State" class="form-control" required>
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text">Country</span>
+                    <input name="country" type="text" aria-label="Country" class="form-control" required>
+                </div>
+                <div class="col-12">
+                    <button id="submit" class="btn btn-primary" type="submit" value="Submit">Submit form</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- TABLE -->
+
+        <h3>Table</h3>
+        <table id="myTable" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Food</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+        </table>
+    </section>
+
+    <!--Script Sheets-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+
+</html>

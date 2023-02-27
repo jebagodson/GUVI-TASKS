@@ -1,0 +1,10 @@
+.centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.font-style{
+    font-size: xxx-large;
+    color: blue;
+}
