@@ -12,17 +12,24 @@ async function fetchPokemonData(url) {
   }
 }
 
+function capitalizeFirstLetter(string){
+  return string.charAt(0).toUpperCase(0) + string.slice(1);
+}
+
 async function displayPokemonData() {
   const data = await fetchPokemonData(apiUrl);
 
+  const pokemonRow = document.createElement('div');
+    pokemonRow.classList.add('row');
+    pokemonContainer.appendChild(pokemonRow);
   for (const pokemon of data.results) {
     const pokemonData = await fetchPokemonData(pokemon.url);
 
     const pokemonElement = document.createElement('div');
-    pokemonElement.classList.add('pokemon');
+    pokemonElement.classList.add('pokemon', 'col-3');
 
     const pokemonName = document.createElement('h2');
-    pokemonName.textContent = pokemonData.name;
+    pokemonName.textContent = capitalizeFirstLetter(pokemonData.name);
 
     const pokemonImage = document.createElement('img');
     pokemonImage.setAttribute("class", "card-img")
@@ -43,9 +50,61 @@ async function displayPokemonData() {
     pokemonElement.appendChild(pokemonMoves);
     pokemonElement.appendChild(pokemonWeight);
 
-    pokemonContainer.appendChild(pokemonElement);
+    pokemonRow.appendChild(pokemonElement);
+  
   }
+  
 }
 
 displayPokemonData();
 
+
+
+
+
+const itemsPerPage = 4;
+let currentPage = 1;
+
+function displayData(page, data) {
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const pageData = data.slice(startIndex, endIndex);
+  // display the pageData however you like
+}
+
+function createLinks(totalPages) {
+  const linksContainer = document.createElement('div');
+  for (let i = 1; i <= totalPages; i++) {
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = i;
+    if (i === currentPage) {
+      link.classList.add('active');
+    }
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      currentPage = i;
+      fetchData();
+      // update the active link
+      linksContainer.querySelector('.active').classList.remove('active');
+      event.target.classList.add('active');
+    });
+    linksContainer.appendChild(link);
+  }
+  // append linksContainer to the page
+}
+
+function fetchData() {
+  fetch('https://pokeapi.co/api/v2/pokemon?limit=50')
+    .then(response => response.json())
+    .then(data => {
+      const totalPages = Math.ceil(data.length / itemsPerPage);
+      displayData(currentPage, data);
+      createLinks(totalPages);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+}
+
+fetchData();

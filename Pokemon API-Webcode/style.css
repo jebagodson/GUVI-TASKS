@@ -6,24 +6,28 @@ body {
   background-size: 16px 16px;
   font-size: 1rem;
 }
-.header{
+
+.header {
   background-color: #282828;
 }
-  .pokemon{
-    border-radius: 10px;
-    text-align: center;
-    width: 250px;
-    margin: 10px;
-    padding: 10px;
-    background-color: #282828;
-    color: azure;
+
+.pokemon {
+  border-radius: 10px;
+  text-align: center;
+  width: 265px!important;
+  margin: 10px;
+  background-color: #282828;
+  color: azure;
 }
-.pokemon-list{
+
+.pokemon-list {
   display: inline-flex;
 }
-.margin-style{
+
+.margin-style {
   height: 40px;
 }
-.card-img{
-  width: 120px!important;
+
+.card-img {
+  width: 120px !important;
 }
