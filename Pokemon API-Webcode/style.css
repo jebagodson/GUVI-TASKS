@@ -31,3 +31,7 @@ body {
 .card-img {
   width: 120px !important;
 }
+
+.pokemon:hover{
+  box-shadow: 5px 5px 10px 10px rgba(255, 255, 255, 0.2);
+}
