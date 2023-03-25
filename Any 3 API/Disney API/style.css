@@ -1,0 +1,14 @@
+.img-size{
+    width: 200px;
+    height: 250px;
+    place-self: center;
+    border: 1px solid;
+}
+.bold{
+    font-weight: 700;
+    font-family:cursive;
+}
+.card:hover{
+    cursor: pointer;
+    border: 5px solid grey;
+}

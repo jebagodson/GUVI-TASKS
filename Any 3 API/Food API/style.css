@@ -1,0 +1,15 @@
+.card-image{
+    width: 400px;
+}
+.img-center{
+    display: flex;
+    align-self: center;
+}
+.name{
+    background-color: darkcyan;
+    color: aliceblue;
+}
+.row>*{
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
